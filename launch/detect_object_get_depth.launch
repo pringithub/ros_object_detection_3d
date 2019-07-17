@@ -1,0 +1,9 @@
+<launch>
+	<node pkg= "tensorflow_object_detector" name="detect_ros_and_find_depth" type="detect_ros_and_find_depth.py"  output="screen"> 
+    <!--remap from='image' to='/camera/color/image_raw'/-->
+	</node>
+	<!-- rviz -->
+  <arg name ="rviz" default="true" />
+  <arg name ="rviz_file" default="$(find tensorflow_object_detector)/config/display.rviz"/>
+	<node pkg ="rviz" type="rviz" name="rviz" output="screen" args= "-d $(arg rviz_file)" if="$(arg rviz)"/>
+</launch>

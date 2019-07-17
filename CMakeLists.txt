@@ -133,7 +133,7 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-catkin_install_python(PROGRAMS scripts/detect_ros.py 
+catkin_install_python(PROGRAMS scripts/detect_ros_and_find_depth.py 
 			DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 ###########
 ## Build ##
